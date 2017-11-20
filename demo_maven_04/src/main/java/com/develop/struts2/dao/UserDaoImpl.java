@@ -68,4 +68,17 @@ public class UserDaoImpl implements UserDao {
 		
 	}
 
+	@SuppressWarnings("unchecked")
+	public User findByUserName(String username) {
+		
+		List<User> users = sessionFactory.getCurrentSession().createCriteria(User.class)
+				.add(Restrictions.eq("username", username)).addOrder(Order.asc("lastName")).list();
+		
+		if (users.size() > 0) {
+			return users.get(0);
+		} else {
+			return null;
+		}
+	}
+
 }

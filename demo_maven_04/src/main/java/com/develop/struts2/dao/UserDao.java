@@ -10,5 +10,7 @@ public interface UserDao {
 	boolean isExitedEmail(String email);
 	List<User> getUserList();
 	List<User> searchUser(String username);
+	
+	User findByUserName(String username);
 
 }

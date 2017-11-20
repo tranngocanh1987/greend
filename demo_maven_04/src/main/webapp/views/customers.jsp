@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
- <a href="user">My Example</a>
+ <a href="login">Login</a>
 </body>
 </html>
